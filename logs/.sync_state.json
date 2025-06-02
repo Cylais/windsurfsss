@@ -1,0 +1,72 @@
+{
+  "actionLog.md": {
+    "hash": "ab36ea45f7eb9ba84a6d64994f6a6c1c2e49be8dd0bb7c7f4d79556d0394aa5e",
+    "last_synced": "2025-05-25T03:25:31.480942",
+    "entity_id": "ent_1748139931474"
+  },
+  "activeContext.md": {
+    "hash": "3f92bc6060b2d6062262f462ef8b88835ab3af5775507a5ff51ec279bd7cbca3",
+    "last_synced": "2025-05-25T18:03:46.753297",
+    "entity_id": "ent_1748139931480"
+  },
+  "decisionLog.md": {
+    "hash": "cbb5f1ef1077972e1390a20afe4a4e864486bfe7b45f1e1447870be324861d2c",
+    "last_synced": "2025-05-25T18:03:46.761328",
+    "entity_id": "ent_1748139931488"
+  },
+  "lessonsLearned.md": {
+    "hash": "78a05968a5ea31eb3e6ef7db8fb272746ddf4232be9d1f588b0b1ce45b95f03c",
+    "last_synced": "2025-05-25T18:03:46.770337",
+    "entity_id": "ent_1748139931493"
+  },
+  "MCP_INTEGRATION.md": {
+    "hash": "54e9118447f7d475e5190550abf928ce9a89cb417b9c5ed5654fcad2fb4510e9",
+    "last_synced": "2025-05-25T18:03:46.778893",
+    "entity_id": "ent_1748139931499"
+  },
+  "milestones.md": {
+    "hash": "80262d0a54eac8acb1ce39009eb477bcfd9c1fee872e1fec3ab912d40d4053a3",
+    "last_synced": "2025-05-25T03:25:31.509562",
+    "entity_id": "ent_1748139931505"
+  },
+  "productContext.md": {
+    "hash": "6c273a43000ebcd33166eb88fcb7968416f34553d4345c5a5c531e6d43d38ef7",
+    "last_synced": "2025-05-25T18:03:46.794939",
+    "entity_id": "ent_1748139931510"
+  },
+  "progress.md": {
+    "hash": "aaa34017a0321f32c6e1efd10be96446e70d8dc0b372c01cdbc997022e09b174",
+    "last_synced": "2025-05-25T18:03:46.804136",
+    "entity_id": "ent_1748139931516"
+  },
+  "projectbrief.md": {
+    "hash": "c4460a9b495eaa61fc1c83ed3155641aa3c73187989a95d946b206034cbc531c",
+    "last_synced": "2025-05-25T18:03:46.812366",
+    "entity_id": "ent_1748139931522"
+  },
+  "README.md": {
+    "hash": "ac8f76d343651b1a60856eab8f08fb0a8fdfa37120d766cc3b8d7157f39715c1",
+    "last_synced": "2025-05-25T18:03:46.822376",
+    "entity_id": "ent_1748139931528"
+  },
+  "systemPatterns.md": {
+    "hash": "f6dca2e328ca2bffa9886a3bff2f5f4cfc2df2869860f89adb4e9b44db30c939",
+    "last_synced": "2025-05-25T18:03:46.830382",
+    "entity_id": "ent_1748139931534"
+  },
+  "techContext.md": {
+    "hash": "1ab160f68e4105bfd546fb0ba44d6553be194efb4af0098b6d3216c4e60f2573",
+    "last_synced": "2025-05-25T18:03:46.839390",
+    "entity_id": "ent_1748139931538"
+  },
+  "votes.md": {
+    "hash": "f2d52b403ab5ce5ca22af1be2c7b48ee512890145750310d421fc78f61886791",
+    "last_synced": "2025-05-25T03:25:31.550932",
+    "entity_id": "ent_1748139931545"
+  },
+  "MEMORY_SYSTEM.md": {
+    "hash": "f6bc502c9149ae2678d221c223d7df143e1827f3c1759588e09c835067f259cd",
+    "last_synced": "2025-05-25T18:03:46.786932",
+    "entity_id": "ent_1748192626779"
+  }
+}

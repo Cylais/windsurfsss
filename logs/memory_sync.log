@@ -1,0 +1,94 @@
+2025-05-25 04:06:25,369 - INFO - Starting memory sync workflow
+2025-05-25 04:06:25,369 - INFO - Running memory synchronization...
+2025-05-25 04:06:25,518 - INFO - Starting memory synchronization process
+2025-05-25 04:06:25,519 - INFO - Starting memory synchronization
+2025-05-25 04:06:25,520 - INFO - Processing memory-bank\actionLog.md
+2025-05-25 04:06:25,521 - ERROR - Error syncing memory-bank\actionLog.md to MCP: name 'mcp2_create_entities' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Rhysii Boy\Projects\test\Windsurf Project Startup Pack\tools\sync_memory.py", line 141, in sync_to_mcp
+    response = mcp2_create_entities([entity_data])
+               ^^^^^^^^^^^^^^^^^^^^
+NameError: name 'mcp2_create_entities' is not defined
+2025-05-25 04:06:25,526 - INFO - Processing memory-bank\activeContext.md
+2025-05-25 04:06:25,526 - ERROR - Error syncing memory-bank\activeContext.md to MCP: name 'mcp2_create_entities' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Rhysii Boy\Projects\test\Windsurf Project Startup Pack\tools\sync_memory.py", line 141, in sync_to_mcp
+    response = mcp2_create_entities([entity_data])
+               ^^^^^^^^^^^^^^^^^^^^
+NameError: name 'mcp2_create_entities' is not defined
+2025-05-25 04:06:25,527 - INFO - Processing memory-bank\decisionLog.md
+2025-05-25 04:06:25,527 - ERROR - Error syncing memory-bank\decisionLog.md to MCP: name 'mcp2_create_entities' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Rhysii Boy\Projects\test\Windsurf Project Startup Pack\tools\sync_memory.py", line 141, in sync_to_mcp
+    response = mcp2_create_entities([entity_data])
+               ^^^^^^^^^^^^^^^^^^^^
+NameError: name 'mcp2_create_entities' is not defined
+2025-05-25 04:06:25,528 - INFO - Processing memory-bank\lessonsLearned.md
+2025-05-25 04:06:25,529 - ERROR - Error syncing memory-bank\lessonsLearned.md to MCP: name 'mcp2_create_entities' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Rhysii Boy\Projects\test\Windsurf Project Startup Pack\tools\sync_memory.py", line 141, in sync_to_mcp
+    response = mcp2_create_entities([entity_data])
+               ^^^^^^^^^^^^^^^^^^^^
+NameError: name 'mcp2_create_entities' is not defined
+2025-05-25 04:06:25,529 - INFO - Processing memory-bank\milestones.md
+2025-05-25 04:06:25,529 - ERROR - Error syncing memory-bank\milestones.md to MCP: name 'mcp2_create_entities' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Rhysii Boy\Projects\test\Windsurf Project Startup Pack\tools\sync_memory.py", line 141, in sync_to_mcp
+    response = mcp2_create_entities([entity_data])
+               ^^^^^^^^^^^^^^^^^^^^
+NameError: name 'mcp2_create_entities' is not defined
+2025-05-25 04:06:25,530 - INFO - Processing memory-bank\productContext.md
+2025-05-25 04:06:25,531 - ERROR - Error syncing memory-bank\productContext.md to MCP: name 'mcp2_create_entities' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Rhysii Boy\Projects\test\Windsurf Project Startup Pack\tools\sync_memory.py", line 141, in sync_to_mcp
+    response = mcp2_create_entities([entity_data])
+               ^^^^^^^^^^^^^^^^^^^^
+NameError: name 'mcp2_create_entities' is not defined
+2025-05-25 04:06:25,531 - INFO - Processing memory-bank\progress.md
+2025-05-25 04:06:25,532 - ERROR - Error syncing memory-bank\progress.md to MCP: name 'mcp2_create_entities' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Rhysii Boy\Projects\test\Windsurf Project Startup Pack\tools\sync_memory.py", line 141, in sync_to_mcp
+    response = mcp2_create_entities([entity_data])
+               ^^^^^^^^^^^^^^^^^^^^
+NameError: name 'mcp2_create_entities' is not defined
+2025-05-25 04:06:25,532 - INFO - Processing memory-bank\projectbrief.md
+2025-05-25 04:06:25,533 - ERROR - Error syncing memory-bank\projectbrief.md to MCP: name 'mcp2_create_entities' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Rhysii Boy\Projects\test\Windsurf Project Startup Pack\tools\sync_memory.py", line 141, in sync_to_mcp
+    response = mcp2_create_entities([entity_data])
+               ^^^^^^^^^^^^^^^^^^^^
+NameError: name 'mcp2_create_entities' is not defined
+2025-05-25 04:06:25,533 - INFO - Processing memory-bank\README.md
+2025-05-25 04:06:25,534 - ERROR - Error syncing memory-bank\README.md to MCP: name 'mcp2_create_entities' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Rhysii Boy\Projects\test\Windsurf Project Startup Pack\tools\sync_memory.py", line 141, in sync_to_mcp
+    response = mcp2_create_entities([entity_data])
+               ^^^^^^^^^^^^^^^^^^^^
+NameError: name 'mcp2_create_entities' is not defined
+2025-05-25 04:06:25,534 - INFO - Processing memory-bank\systemPatterns.md
+2025-05-25 04:06:25,535 - ERROR - Error syncing memory-bank\systemPatterns.md to MCP: name 'mcp2_create_entities' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Rhysii Boy\Projects\test\Windsurf Project Startup Pack\tools\sync_memory.py", line 141, in sync_to_mcp
+    response = mcp2_create_entities([entity_data])
+               ^^^^^^^^^^^^^^^^^^^^
+NameError: name 'mcp2_create_entities' is not defined
+2025-05-25 04:06:25,535 - INFO - Processing memory-bank\techContext.md
+2025-05-25 04:06:25,536 - ERROR - Error syncing memory-bank\techContext.md to MCP: name 'mcp2_create_entities' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Rhysii Boy\Projects\test\Windsurf Project Startup Pack\tools\sync_memory.py", line 141, in sync_to_mcp
+    response = mcp2_create_entities([entity_data])
+               ^^^^^^^^^^^^^^^^^^^^
+NameError: name 'mcp2_create_entities' is not defined
+2025-05-25 04:06:25,537 - INFO - Processing memory-bank\votes.md
+2025-05-25 04:06:25,537 - ERROR - Error syncing memory-bank\votes.md to MCP: name 'mcp2_create_entities' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Rhysii Boy\Projects\test\Windsurf Project Startup Pack\tools\sync_memory.py", line 141, in sync_to_mcp
+    response = mcp2_create_entities([entity_data])
+               ^^^^^^^^^^^^^^^^^^^^
+NameError: name 'mcp2_create_entities' is not defined
+2025-05-25 04:06:25,538 - INFO - Memory synchronization complete
+2025-05-25 04:06:25,538 - INFO - Memory synchronization completed successfully
+2025-05-25 04:06:25,538 - INFO - Checking sync status...
+2025-05-25 04:06:25,543 - INFO - Checking memory sync status
+2025-05-25 04:06:25,544 - ERROR - No sync state available. Please run sync_memory.py first.
+2025-05-25 04:06:25,544 - INFO - Memory is in sync

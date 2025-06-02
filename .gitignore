@@ -12,31 +12,31 @@ yarn-error.log*
 *.tsbuildinfo
 
 # Logs
-logs/
-*.log
+# logs/
+# *.log
 
 # Python (if any)
-__pycache__/
-*.py[cod]
-*.pyo
-*.pyd
-.venv/
-venv/
-env/
-crewenv/
+# __pycache__/
+# *.py[cod]
+# *.pyo
+# *.pyd
+# .venv/
+# venv/
+# env/
+# crewenv/
 
 # VSCode/IDE
-.vscode/
-.idea/
-*.swp
+# .vscode/
+# .idea/
+# *.swp
 
 # OS
-.DS_Store
-Thumbs.db
+# .DS_Store
+# Thumbs.db
 
 # Project-specific
-active_conversations.md
-chat_link.md
-memory-bank/
-logs/
-crewenv/
+# active_conversations.md
+# chat_link.md
+# memory-bank/
+# logs/
+# crewenv/

@@ -1,0 +1,58 @@
+2025-05-25 04:25:31,470 - __main__ - INFO - Starting memory synchronization with SQLite database
+2025-05-25 04:25:31,470 - __main__ - INFO - Memory bank directory: C:\Users\Rhysii Boy\Projects\test\Windsurf Project Startup Pack\memory-bank
+2025-05-25 04:25:31,471 - __main__ - INFO - Starting memory synchronization with SQLite database
+2025-05-25 04:25:31,473 - __main__ - INFO - Processing memory-bank\actionLog.md
+2025-05-25 04:25:31,480 - __main__ - INFO - Created new entity ent_1748139931474 from memory-bank\actionLog.md
+2025-05-25 04:25:31,480 - __main__ - INFO - Processing memory-bank\activeContext.md
+2025-05-25 04:25:31,487 - __main__ - INFO - Created new entity ent_1748139931480 from memory-bank\activeContext.md
+2025-05-25 04:25:31,487 - __main__ - INFO - Processing memory-bank\decisionLog.md
+2025-05-25 04:25:31,492 - __main__ - INFO - Created new entity ent_1748139931488 from memory-bank\decisionLog.md
+2025-05-25 04:25:31,492 - __main__ - INFO - Processing memory-bank\lessonsLearned.md
+2025-05-25 04:25:31,497 - __main__ - INFO - Created new entity ent_1748139931493 from memory-bank\lessonsLearned.md
+2025-05-25 04:25:31,499 - __main__ - INFO - Processing memory-bank\MCP_INTEGRATION.md
+2025-05-25 04:25:31,502 - __main__ - INFO - Created new entity ent_1748139931499 from memory-bank\MCP_INTEGRATION.md
+2025-05-25 04:25:31,502 - __main__ - INFO - Processing memory-bank\milestones.md
+2025-05-25 04:25:31,509 - __main__ - INFO - Created new entity ent_1748139931505 from memory-bank\milestones.md
+2025-05-25 04:25:31,509 - __main__ - INFO - Processing memory-bank\productContext.md
+2025-05-25 04:25:31,515 - __main__ - INFO - Created new entity ent_1748139931510 from memory-bank\productContext.md
+2025-05-25 04:25:31,515 - __main__ - INFO - Processing memory-bank\progress.md
+2025-05-25 04:25:31,521 - __main__ - INFO - Created new entity ent_1748139931516 from memory-bank\progress.md
+2025-05-25 04:25:31,521 - __main__ - INFO - Processing memory-bank\projectbrief.md
+2025-05-25 04:25:31,527 - __main__ - INFO - Created new entity ent_1748139931522 from memory-bank\projectbrief.md
+2025-05-25 04:25:31,527 - __main__ - INFO - Processing memory-bank\README.md
+2025-05-25 04:25:31,532 - __main__ - INFO - Created new entity ent_1748139931528 from memory-bank\README.md
+2025-05-25 04:25:31,533 - __main__ - INFO - Processing memory-bank\systemPatterns.md
+2025-05-25 04:25:31,538 - __main__ - INFO - Created new entity ent_1748139931534 from memory-bank\systemPatterns.md
+2025-05-25 04:25:31,538 - __main__ - INFO - Processing memory-bank\techContext.md
+2025-05-25 04:25:31,544 - __main__ - INFO - Created new entity ent_1748139931538 from memory-bank\techContext.md
+2025-05-25 04:25:31,545 - __main__ - INFO - Processing memory-bank\votes.md
+2025-05-25 04:25:31,550 - __main__ - INFO - Created new entity ent_1748139931545 from memory-bank\votes.md
+2025-05-25 04:25:31,551 - __main__ - INFO - Memory synchronization complete: 13 files synced, 0 errors
+2025-05-25 04:25:31,551 - __main__ - INFO - Memory synchronization completed successfully
+2025-05-25 19:03:46,740 - __main__ - INFO - Starting memory synchronization with SQLite database
+2025-05-25 19:03:46,741 - __main__ - INFO - Memory bank directory: C:\Users\Rhysii Boy\Projects\test\Windsurf Project Startup Pack\memory-bank
+2025-05-25 19:03:46,742 - __main__ - INFO - Starting memory synchronization with SQLite database
+2025-05-25 19:03:46,745 - __main__ - INFO - Processing memory-bank\activeContext.md
+2025-05-25 19:03:46,752 - __main__ - INFO - Updated entity ent_1748139931480 from memory-bank\activeContext.md
+2025-05-25 19:03:46,753 - __main__ - INFO - Processing memory-bank\decisionLog.md
+2025-05-25 19:03:46,761 - __main__ - INFO - Updated entity ent_1748139931488 from memory-bank\decisionLog.md
+2025-05-25 19:03:46,761 - __main__ - INFO - Processing memory-bank\lessonsLearned.md
+2025-05-25 19:03:46,769 - __main__ - INFO - Updated entity ent_1748139931493 from memory-bank\lessonsLearned.md
+2025-05-25 19:03:46,770 - __main__ - INFO - Processing memory-bank\MCP_INTEGRATION.md
+2025-05-25 19:03:46,778 - __main__ - INFO - Updated entity ent_1748139931499 from memory-bank\MCP_INTEGRATION.md
+2025-05-25 19:03:46,779 - __main__ - INFO - Processing memory-bank\MEMORY_SYSTEM.md
+2025-05-25 19:03:46,785 - __main__ - INFO - Created new entity ent_1748192626779 from memory-bank\MEMORY_SYSTEM.md
+2025-05-25 19:03:46,786 - __main__ - INFO - Processing memory-bank\productContext.md
+2025-05-25 19:03:46,794 - __main__ - INFO - Updated entity ent_1748139931510 from memory-bank\productContext.md
+2025-05-25 19:03:46,794 - __main__ - INFO - Processing memory-bank\progress.md
+2025-05-25 19:03:46,803 - __main__ - INFO - Updated entity ent_1748139931516 from memory-bank\progress.md
+2025-05-25 19:03:46,804 - __main__ - INFO - Processing memory-bank\projectbrief.md
+2025-05-25 19:03:46,811 - __main__ - INFO - Updated entity ent_1748139931522 from memory-bank\projectbrief.md
+2025-05-25 19:03:46,812 - __main__ - INFO - Processing memory-bank\README.md
+2025-05-25 19:03:46,821 - __main__ - INFO - Updated entity ent_1748139931528 from memory-bank\README.md
+2025-05-25 19:03:46,822 - __main__ - INFO - Processing memory-bank\systemPatterns.md
+2025-05-25 19:03:46,830 - __main__ - INFO - Updated entity ent_1748139931534 from memory-bank\systemPatterns.md
+2025-05-25 19:03:46,830 - __main__ - INFO - Processing memory-bank\techContext.md
+2025-05-25 19:03:46,838 - __main__ - INFO - Updated entity ent_1748139931538 from memory-bank\techContext.md
+2025-05-25 19:03:46,840 - __main__ - INFO - Memory synchronization complete: 11 files synced, 0 errors
+2025-05-25 19:03:46,840 - __main__ - INFO - Memory synchronization completed successfully
