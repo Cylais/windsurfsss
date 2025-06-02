@@ -1,0 +1,9 @@
+################################################################################
+#           DEPRECATED: DEV/TEST REQUIREMENTS MOVED TO ROOT                    #
+################################################################################
+# All development, testing, linting, and CI dependencies are now managed in:   #
+#   requirements-dev.txt (at root)                                             #
+#                                                                              #
+# This file is retained for backward compatibility only.                       #
+# Please update your onboarding, scripts, and CI to use the root requirements. #
+################################################################################

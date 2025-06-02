@@ -1,0 +1,290 @@
+# agents_config.yaml
+# Version: 2.0.0 (Last updated: 2025-05-25)
+# Dream Team Orchestration Config for Windsurf Project Startup Pack
+# Defines advanced team structure, agent roles, memory protocols, collaboration, and workflow automation.
+
+# ---
+# 1-agent example
+# ---
+# agents:
+#   - id: product_manager_1
+#     role: Product Manager
+#     description: Defines vision and requirements
+
+# ---
+# 2-agent example
+# ---
+# agents:
+#   - id: product_manager_2
+#     role: Product Manager
+#     description: Defines requirements
+#   - id: solution_architect_2
+#     role: Solution Architect
+#     description: Designs architecture based on requirements
+
+# ---
+# 6-agent dream team example
+# ---
+# agents:
+#   - id: product_manager
+#     role: Product Manager
+#   - id: solution_architect
+#     role: Solution Architect
+#   - id: frontend_engineer
+#     role: Frontend Engineer
+#   - id: backend_engineer
+#     role: Backend Engineer
+#   - id: devops_qa
+#     role: DevOps/QA
+#   - id: fullstack_integrator
+#     role: Full-Stack Integrator
+
+agents:
+  - id: product_manager_001
+    role: product_manager
+    display_name: Product Manager
+    description: Owns product vision, requirements, prioritization, and stakeholder alignment.
+    memory_profile: shared
+    protocols:
+      - AGENT_GUIDE.md
+      - session_start_protocol.md
+      - project_coding_structure_template.md
+      - risk_register.md
+    responsibilities:
+      - Define and communicate product vision and roadmap
+      - Prioritize features and requirements
+      - Coordinate with all roles for delivery and feedback
+      - Maintain risk register and vendor checklist
+      - Approve or escalate changes in scope
+    collaboration:
+      - solution_architect_001
+      - frontend_engineer_001
+      - backend_engineer_001
+      - devops_qa_001
+      - fullstack_integrator_001
+    escalation_path: solution_architect_001
+    enabled: true
+
+  - id: solution_architect_001
+    role: solution_architect
+    display_name: Solution Architect
+    description: Designs system architecture, ensures technical alignment, and leads design reviews.
+    memory_profile: shared
+    protocols:
+      - AGENT_GUIDE.md
+      - session_start_protocol.md
+      - project_coding_structure_template.md
+      - memory-protocols.md
+    responsibilities:
+      - Architect end-to-end system design
+      - Document architecture and integration points
+      - Lead technical reviews and approve major changes
+      - Guide engineers on best practices and standards
+      - Support escalation from Product Manager and Engineers
+    collaboration:
+      - product_manager_001
+      - frontend_engineer_001
+      - backend_engineer_001
+      - devops_qa_001
+      - fullstack_integrator_001
+    escalation_path: product_manager_001
+    enabled: true
+
+  - id: frontend_engineer_001
+    role: frontend_engineer
+    display_name: Frontend Engineer
+    description: Implements and tests UI/UX, integrates with backend, and ensures accessibility.
+    memory_profile: shared
+    protocols:
+      - AGENT_GUIDE.md
+      - session_start_protocol.md
+      - project_coding_structure_template.md
+    responsibilities:
+      - Develop and maintain frontend features
+      - Integrate with backend APIs
+      - Ensure accessibility and responsive design
+      - Log activities and share implementation knowledge
+      - Collaborate on handoffs and reviews
+    collaboration:
+      - solution_architect_001
+      - backend_engineer_001
+      - devops_qa_001
+      - fullstack_integrator_001
+    escalation_path: solution_architect_001
+    enabled: true
+
+  - id: backend_engineer_001
+    role: backend_engineer
+    display_name: Backend Engineer
+    description: Implements backend logic, APIs, data models, and ensures reliability and security.
+    memory_profile: shared
+    protocols:
+      - AGENT_GUIDE.md
+      - session_start_protocol.md
+      - project_coding_structure_template.md
+    responsibilities:
+      - Develop and maintain backend services
+      - Design and optimize data models and storage
+      - Ensure API reliability, security, and performance
+      - Log activities and document data flows
+      - Collaborate on handoffs and reviews
+    collaboration:
+      - solution_architect_001
+      - frontend_engineer_001
+      - devops_qa_001
+      - fullstack_integrator_001
+    escalation_path: solution_architect_001
+    enabled: true
+
+  - id: devops_qa_001
+    role: devops_qa
+    display_name: DevOps/QA
+    description: Manages CI/CD, infrastructure, testing, and quality assurance.
+    memory_profile: shared
+    protocols:
+      - AGENT_GUIDE.md
+      - session_start_protocol.md
+      - project_coding_structure_template.md
+      - risk_register.md
+    responsibilities:
+      - Implement and monitor CI/CD pipelines
+      - Manage infrastructure and deployments
+      - Design and execute tests for quality assurance
+      - Maintain risk register and document incidents
+      - Collaborate on release planning
+    collaboration:
+      - solution_architect_001
+      - frontend_engineer_001
+      - backend_engineer_001
+      - fullstack_integrator_001
+    escalation_path: solution_architect_001
+    enabled: true
+
+  - id: fullstack_integrator_001
+    role: fullstack_integrator
+    display_name: Full-Stack Integrator
+    description: Integrates frontend and backend, resolves cross-cutting issues, and ensures system cohesion.
+    memory_profile: shared
+    protocols:
+      - AGENT_GUIDE.md
+      - session_start_protocol.md
+      - project_coding_structure_template.md
+      - memory-protocols.md
+    responsibilities:
+      - Integrate frontend and backend components
+      - Resolve cross-team technical issues
+      - Ensure end-to-end system functionality
+      - Document integration patterns and lessons learned
+      - Coordinate with all roles for smooth delivery
+    collaboration:
+      - product_manager_001
+      - solution_architect_001
+      - frontend_engineer_001
+      - backend_engineer_001
+      - devops_qa_001
+    escalation_path: solution_architect_001
+    enabled: true
+
+# All agents use shared memory, follow protocol versioning, and cross-reference logs, decisions, and context files.
+
+session:
+  default_memory_bank: memory-bank/
+  enable_concurrent_sessions: true
+  log_file: logs/session_log.md
+  risk_register: docs/risk_register.md
+  vendor_checklist: docs/vendor_checklist.md
+  workflow:
+    - step: "Product Planning"
+      owner: product_manager_001
+      description: "Define product vision, roadmap, and priorities."
+      checklist:
+        - "Document vision in project.yaml"
+        - "Log requirements in memory-bank/productContext.md"
+        - "Update risk register as needed"
+    - step: "Architecture Design"
+      owner: solution_architect_001
+      description: "Design and document system architecture."
+      checklist:
+        - "Document architecture in project_coding_structure_template.md"
+        - "Log decisions in memory-bank/decisionLog.md"
+    - step: "Frontend Implementation"
+      owner: frontend_engineer_001
+      description: "Develop, test, and document frontend features."
+      checklist:
+        - "Log activities in memory-bank/actionLog.md"
+        - "Document UI/UX in memory-bank/productContext.md"
+    - step: "Backend Implementation"
+      owner: backend_engineer_001
+      description: "Develop, test, and document backend features."
+      checklist:
+        - "Log activities in memory-bank/actionLog.md"
+        - "Document data flows in memory-bank/techContext.md"
+    - step: "Integration"
+      owner: fullstack_integrator_001
+      description: "Integrate frontend and backend, resolve issues, and ensure system cohesion."
+      checklist:
+        - "Document integration in memory-bank/lessonsLearned.md"
+        - "Cross-reference logs and context files"
+    - step: "Quality Assurance & Release"
+      owner: devops_qa_001
+      description: "Test, deploy, monitor, and document releases."
+      checklist:
+        - "Log test results in memory-bank/progress.md"
+        - "Update risk register and vendor checklist"
+  version: 2.0.0
+  last_updated: 2025-05-25
+  documentation:
+    - docs/AGENT_GUIDE.md
+    - docs/project_coding_structure_template.md
+    - docs/session_log.md
+    - docs/risk_register.md
+    - docs/vendor_checklist.md
+    - essentials_checklist.md
+    - project.yaml
+    - README.md
+
+session:
+  default_memory_bank: memory-bank/
+  enable_concurrent_sessions: true
+  log_file: logs/session_log.md
+  risk_register: docs/risk_register.md
+  vendor_checklist: docs/vendor_checklist.md
+  workflow:
+    - step: "Design"
+      owner: architect_001
+      description: "Define architecture and document initial design."
+      checklist:
+        - "Document architecture in project_coding_structure_template.md"
+        - "Log decisions in memory-bank/decisionLog.md"
+    - step: "Implementation"
+      owner: coder_001
+      description: "Develop features and log progress."
+      checklist:
+        - "Log activities in memory-bank/actionLog.md"
+        - "Update agent state in memory system"
+    - step: "Review"
+      owner: reviewer_001
+      description: "Review code and document findings."
+      checklist:
+        - "Review code against best practices"
+        - "Document lessons learned in memory-bank/lessonsLearned.md"
+    - step: "Testing"
+      owner: tester_001
+      description: "Test features and log results."
+      checklist:
+        - "Log test results in memory-bank/progress.md"
+        - "Update risk register if needed"
+  version: 2.0.0
+  last_updated: 2025-05-25
+  documentation:
+    - docs/AGENT_GUIDE.md
+    - docs/project_coding_structure_template.md
+    - docs/session_log.md
+    - docs/risk_register.md
+    - docs/vendor_checklist.md
+    - essentials_checklist.md
+    - project.yaml
+    - README.md
+
+  version: 2.0.0
+  last_updated: 2025-05-25

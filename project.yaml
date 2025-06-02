@@ -1,0 +1,44 @@
+# Project Metadata for Windsurf Project Startup Pack
+# Version: 2.0.0 (Last updated: 2025-05-25)
+
+project:
+  name: Windsurf Project Startup Pack
+  version: 2.0.0
+  last_updated: 2025-05-25
+  status: active
+  python_version: ">=3.9"
+  license: MIT
+  tags: [windsurf, starter, multi-agent, collaborative, automation]
+  description: |
+    A plug-and-play starter pack for collaborative Windsurf projects, providing best practices, memory protocols, multi-agent support, and workflow-driven automation out of the box.
+  maintainers:
+    - name: "Your Name Here"
+      role: "Lead Maintainer"
+      contact: "your.email@example.com"
+    # Add more maintainers as needed
+  roles:
+    - Product Manager
+    - Solution Architect
+    - Frontend Engineer
+    - Backend Engineer
+    - DevOps/QA
+    - Full-Stack Integrator
+  established_protocols:
+    - Unified Memory System
+    - Multi-Agent Collaboration
+    - Workflow Automation
+  dependencies:
+    - requirements.txt
+    - tools/requirements.txt
+  onboarding_guide: docs/ONBOARDING.md
+  documentation:
+    - docs/AGENT_GUIDE.md
+    - docs/project_coding_structure_template.md
+    - docs/session_log.md
+    - docs/risk_register.md
+    - docs/vendor_checklist.md
+  config_files:
+    - agents_config.yaml
+    - essentials_checklist.md
+    - workflow.yaml
+    - README.md

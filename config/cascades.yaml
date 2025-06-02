@@ -1,0 +1,74 @@
+# ---
+# cascades.yaml: Dream Team Agent Directory & Workflow Automation
+#
+# Purpose:
+#   - Defines all core agent roles, responsibilities, and contact info for notification routing and workflow automation.
+#   - Used by automation scripts, notification systems, and onboarding tools to orchestrate multi-agent collaboration.
+#
+# Usage:
+#   - Reference this file in workflow automation scripts and notification routing logic.
+#   - Extend by adding new agents or updating responsibilities as your team evolves.
+#   - For notification rules, see notifications.yaml.
+#   - For orchestration configs, see agents_config.yaml.
+#
+# How to add a new agent (template):
+#   - name: New Agent Role
+#     responsibilities:
+#       - responsibility 1
+#       - responsibility 2
+#     contact: new_agent@cascade.local
+#
+# Example automation integration:
+#   - Notification scripts can route alerts to the contact listed for each role.
+#   - Workflow engines can assign tasks based on responsibilities.
+#
+agents:
+  - name: Product Manager
+    responsibilities:
+      - define vision
+      - gather requirements
+      - prioritize features
+    contact: product_manager@cascade.local
+  - name: Solution Architect
+    responsibilities:
+      - design system architecture
+      - select technologies
+      - ensure scalability
+    contact: solution_architect@cascade.local
+  - name: Frontend Engineer
+    responsibilities:
+      - implement user interface
+      - ensure UX quality
+      - integrate APIs
+    contact: frontend_engineer@cascade.local
+  - name: Backend Engineer
+    responsibilities:
+      - develop APIs
+      - manage data storage
+      - implement business logic
+    contact: backend_engineer@cascade.local
+  - name: DevOps/QA
+    responsibilities:
+      - automate deployment
+      - run QA tests
+      - monitor systems
+    contact: devops_qa@cascade.local
+  - name: Full-Stack Integrator
+    responsibilities:
+      - integrate frontend and backend
+      - resolve integration issues
+      - perform end-to-end testing
+    contact: fullstack_integrator@cascade.local
+
+# This file powers workflow automation and notification routing for all team roles.
+
+# Related files:
+#   - notifications.yaml: Defines notification rules and triggers for each agent.
+#   - agents_config.yaml: Defines orchestration and advanced agent settings.
+
+# Example notification rule (see notifications.yaml for full config):
+# notification_rules:
+#   - event: deployment_failed
+#     notify: devops_qa@cascade.local
+#   - event: feature_ready
+#     notify: product_manager@cascade.local

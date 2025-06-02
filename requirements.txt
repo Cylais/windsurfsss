@@ -1,0 +1,29 @@
+################################################################################
+#                  WINDSURF PROJECT STARTUP PACK: PRODUCTION REQUIREMENTS      #
+################################################################################
+# This file lists ONLY core runtime dependencies for deployment/production.    #
+# Python version: >=3.9                                                        #
+#                                                                              #
+# For development, testing, linting, or CI dependencies, use:                  #
+#   requirements-dev.txt (at root)                                             #
+################################################################################
+
+# =================== CORE RUNTIME DEPENDENCIES ============================= #
+# sqlite3: Lightweight database for agent memory system (standard library)
+# Add your actual runtime dependencies below, e.g.:
+fastapi==0.110.0    # REST API framework (if used)
+pyyaml==6.0         # For YAML config parsing (if used)
+
+# =================== INSTRUCTIONS ============================= #
+# 1. Only include packages needed for production/runtime use.
+# 2. For development, testing, or CI dependencies, use requirements-dev.txt at root.
+# 3. To install production requirements:
+#       pip install -r requirements.txt
+# 4. To install dev/test requirements:
+#       pip install -r requirements-dev.txt
+# 5. For lock files or reproducible installs, consider pip-tools or poetry.
+# 6. For cross-platform onboarding and automation, see tools/memory_system_guide.ps1 and docs/AGENT_GUIDE.md
+# 7. CI/Automation stub:
+#       pip install -r requirements.txt
+#       pip install -r requirements-dev.txt
+################################################################################

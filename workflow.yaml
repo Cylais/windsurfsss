@@ -1,0 +1,136 @@
+# 10x Enhanced Collaborative Workflow for Windsurf Projects
+
+# Unified Memory System Integration
+# All agents automatically have access to the unified memory system
+# through the AgentMemoryInterface
+
+workflows:
+  - name: Standard Project Flow
+    description: Universal, automated, and milestone-reviewed workflow for any project type.
+    steps:
+      - name: Ideation
+        description: Brainstorm goals, requirements, and initial ideas.
+        agents: [Architect, Researcher, Floating Generalist]
+        integrations:
+          - Perplexity-ask: "Research feasibility, trends, and risks."
+          - Memory: "Log all ideas and rationale using agent.share_knowledge()"
+          - Rules: "Follow memory system rules in rules/memory.rules.md"
+        triggers:
+          - on: ideas.finalized
+            action: next:Design
+
+      - name: Design
+        description: Project design, architecture, and planning.
+        agents: [Architect, Coder, Reviewer]
+        integrations:
+          - Perplexity-ask: "Research APIs, libraries, or design patterns as needed."
+          - Memory: "Log design decisions using agent.share_knowledge() with appropriate tags"
+          - Voting: "Vote on key design choices; log votes in memory system"
+        triggers:
+          - on: design.approved
+            action: next:Research
+
+      - name: Research
+        description: Deep dive into technical, product, or market research.
+        agents: [Researcher, Architect, Coder]
+        integrations:
+          - Perplexity-ask: "Investigate alternatives and risks."
+          - Memory: "Store research findings using agent.share_knowledge() with relevant tags"
+        triggers:
+          - on: research.complete
+            action: next:Code
+
+      - name: Code
+        description: Implementation of features and fixes.
+        agents: [Coder, Floating Generalist]
+        integrations:
+          - Playwright: "Write/extend Playwright tests for new features."
+          - Memory: "Log implementation details using agent.log_activity()"
+          - Rules: "Reference design decisions from memory system"
+        triggers:
+          - on: code.readyForTest
+            action: next:Test
+
+      - name: Test
+        description: Automated and manual testing.
+        agents: [QA Tester, Coder]
+        integrations:
+          - Playwright: "Run Playwright tests (using Brave)."
+          - Memory: "Log test results using agent.log_activity()"
+        triggers:
+          - on: tests.passed
+            action: next:Review
+          - on: tests.failed
+            action: notify:Coder
+      - name: Review
+        description: Review code, tests, documentation, and decisions.
+        agents: [Reviewer, Architect, QA Tester]
+        integrations:
+          - Perplexity-ask: "Research best practices or clarify questions."
+          - Memory: "Update lessonsLearned.md and actionLog.md."
+          - Voting: "Vote on release/blockers; log in votes.md."
+          - Sequential-thinking: "Use for complex review/decision."
+        triggers:
+          - on: review.approved
+            action: next:Deploy
+          - on: review.blocked
+            action: escalate:Architect
+      - name: Deploy
+        description: Deploy to production or staging.
+        agents: [DevOps, Automation Agent]
+        integrations:
+          - Memory: "Record deployment state and issues in actionLog.md."
+          - Notification: "Trigger notifications to team."
+          - Reporting: "Update reporting dashboard and milestone summary."
+        triggers:
+          - on: deploy.success
+            action: next:Retrospective
+          - on: deploy.failed
+            action: notify:DevOps
+      - name: Retrospective
+        description: Review project, lessons learned, and next steps.
+        agents: [All]
+        integrations:
+          - Memory: "Summarize in milestones.md and lessonsLearned.md."
+          - Reporting: "Generate project summary and metrics."
+        triggers:
+          - on: retro.complete
+            action: next:Done
+      - name: Done
+        description: Project complete; archive and celebrate!
+        agents: [All]
+        integrations:
+          - Memory: "Archive logs and generate living documentation."
+
+  - name: Fast-Lane Hotfix Flow
+    description: Accelerated path for urgent bug fixes or hotfixes.
+    steps:
+      - name: Hotfix Ideation
+        agents: [Coder, QA Tester]
+        integrations:
+          - Memory: "Log bug context and urgency in actionLog.md."
+      - name: Hotfix Code
+        agents: [Coder]
+        integrations:
+          - Playwright: "Write/extend tests for hotfix."
+          - Memory: "Log implementation in actionLog.md."
+      - name: Hotfix Test
+        agents: [QA Tester]
+        integrations:
+          - Playwright: "Run tests; log results in actionLog.md."
+      - name: Hotfix Review
+        agents: [Reviewer, QA Tester]
+        integrations:
+          - Voting: "Vote on release; log in votes.md."
+      - name: Hotfix Deploy
+        agents: [DevOps, Automation Agent]
+        integrations:
+          - Notification: "Notify team."
+          - Memory: "Log deployment in actionLog.md."
+      - name: Hotfix Complete
+        agents: [All]
+        integrations:
+          - Memory: "Summarize in milestones.md."
+
+# All steps require structured logging, voting where relevant, and milestone summaries. See agent-roles.md and memory-protocols.md for details.
+# Integrations for reporting and external tools (GitHub, Slack, etc.) are modular and can be enabled per project.

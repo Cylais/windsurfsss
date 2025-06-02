@@ -1,0 +1,53 @@
+# ---
+# notifications.yaml: Workflow Notification Rules & Routing
+#
+# Purpose:
+#   - Defines notification triggers, recipients, and templates for workflow automation.
+#   - Ensures all dream team roles receive the right alerts at the right time.
+#   - Used by automation/CI scripts and onboarding tools to connect workflow events to team actions.
+#
+# Usage:
+#   - Reference this file in notification scripts and workflow automation tools.
+#   - Extend by adding new notification rules for new events or agents.
+#   - Update the 'to' field to match agent names in cascades.yaml.
+#   - For agent directory, see cascades.yaml. For orchestration, see agents_config.yaml.
+#
+# How to add a new notification rule (template):
+#   - event: <event_name>
+#     to: <agent_role>
+#     method: <email|slack|sms>
+#     template: "<Your notification message with {{dynamic}} fields>"
+#
+# Troubleshooting/CI:
+#   - Ensure all agent roles referenced here exist in cascades.yaml.
+#   - Use in CI to automate notifications for code, design, deployment, and review events.
+#
+notifications:
+  - event: context.requirements.updated
+    to: Solution Architect
+    method: email
+    template: "Requirements updated by {{lastUpdatedBy}}. Please review and update architecture if needed."
+  - event: context.architecture.updated
+    to: Frontend Engineer
+    method: email
+    template: "Architecture updated by {{lastUpdatedBy}}. Please review for frontend impact."
+  - event: context.api.updated
+    to: Backend Engineer
+    method: email
+    template: "API updated by {{lastUpdatedBy}}. Please sync backend implementation."
+  - event: context.deployment.failed
+    to: DevOps/QA
+    method: email
+    template: "Deployment failed at {{timestamp}}. Please investigate."
+  - event: context.integration.complete
+    to: Full-Stack Integrator
+    method: email
+    template: "Integration complete. Please verify end-to-end functionality."
+  - event: context.feature.ready
+    to: Product Manager
+    method: email
+    template: "Feature marked ready by {{lastUpdatedBy}}. Please review and update roadmap."
+
+# Related files:
+#   - cascades.yaml: Agent directory and responsibilities.
+#   - agents_config.yaml: Orchestration and advanced agent settings.

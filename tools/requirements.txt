@@ -1,0 +1,15 @@
+################################################################################
+# DEPRECATED: All requirements are now managed at the project root.            #
+################################################################################
+# Please use ONLY the following files for dependencies:                        #
+#   requirements.txt         - Production/runtime dependencies                 #
+#   requirements-dev.txt     - Development, testing, linting, and CI           #
+# This file is retained for backward compatibility and should not be used.     #
+#                                                                              #
+# Onboarding/scripts/CI should reference ONLY the root requirements files.     #
+#                                                                              #
+# To install production dependencies:                                          #
+#   pip install -r requirements.txt                                            #
+# To install development dependencies:                                         #
+#   pip install -r requirements-dev.txt                                        #
+################################################################################

@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$comment": "context.schema.json: Project Context Schema for Unified Workflow Automation. Purpose: Defines the structure of project context shared between agents, scripts, and automation tools. Ensures all context fields are validated for consistency, auditability, and plug-and-play extensibility. Usage: Reference this schema in all tools/scripts that read or write project context. Validate context files against this schema in CI and during onboarding. Extend by adding new properties to 'properties' and 'required' as your workflow evolves. Extensibility: To add a new field, add a new property with a clear description and type. Update the 'required' array if the new field must always be present. Use 'enum' or 'format' for validation where appropriate. Related files: cascades.yaml (agent roles), notifications.yaml (notification triggers), agents_config.yaml (orchestration). Example extension: 'deploymentStatus': { 'type': 'string', 'enum': ['success', 'failed'], 'description': 'Latest deployment result.' } CI/Troubleshooting: Use jsonschema or similar tools to validate context files. Ensure all agents and automation scripts are updated when the schema changes. For onboarding, provide example context files and validation scripts.",
+  "type": "object",
+  "description": "Project context schema with audit fields for tracking changes and agent collaboration.",
+  "properties": {
+    "designDoc": {
+      "type": "string",
+      "description": "System design documentation shared by the Solution Architect and Product Manager."
+    },
+    "codeSnippet": {
+      "type": "string",
+      "description": "Latest code implemented by Frontend or Backend Engineer."
+    },
+    "reviewStatus": {
+      "type": "string",
+      "enum": ["pending", "approved", "changes_requested"],
+      "description": "Current review status set by DevOps/QA or Reviewer."
+    },
+    "lastUpdatedBy": {
+      "type": "string",
+      "description": "Agent (role or name) who last updated the context."
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Last update time in ISO 8601 format."
+    }
+  },
+  "required": ["designDoc", "codeSnippet", "reviewStatus", "lastUpdatedBy", "timestamp"]
+}

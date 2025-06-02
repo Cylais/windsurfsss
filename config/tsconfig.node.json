@@ -1,0 +1,11 @@
+{
+  "description": "tsconfig.node.json: Node-specific TypeScript config for Playwright and tooling. Usage: Used by IDE, CI, and Playwright for node-based scripts. Extensibility: Add files to 'include' for new configs. Related: tsconfig.json for main config, playwright.config.js for test runner. See ONBOARDING.md for troubleshooting.",
+  "compilerOptions": {
+    "composite": true,
+    "skipLibCheck": true,
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["vite.config.ts"]
+}

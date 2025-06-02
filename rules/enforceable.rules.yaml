@@ -1,0 +1,139 @@
+# Enforceable Rules
+# Version: 2.0.0
+# Last Updated: 2025-05-25
+
+# Literal Execution Rule [MANDATORY]
+# Agents and automation must follow all instructions, rules, and protocols exactly as written, without summarizing, interpreting, or making assumptions. Explanations or summaries are only allowed when explicitly requested. Any deviation is a protocol violation.
+
+# Exhaustive File Analysis Rule [MANDATORY]
+# Whenever the user explicitly requests a file to be analyzed, checked, or reviewed, the agent must perform a deep dive and exhaustive review of every single line of the file. This includes checking for legacy references, deprecated instructions, hidden inconsistencies, and any content that may be out of alignment with current protocols or project structure. Partial or summary reviews are not permitted unless the user specifically requests a summary or limited-scope check.
+
+# Documentation Rules
+documentation:
+  required_files:
+    - path: "docs/AGENT_GUIDE.md"
+      description: "Comprehensive agent developer guide"
+    - path: "docs/MEMORY_CHEATSHEET.md"
+      description: "Quick reference for memory system operations"
+    - path: "docs/memory-protocols.md"
+      description: "Unified memory system protocols"
+    - path: "docs/Initiate_Startup_Flow.md"
+      description: "Step-by-step project onboarding"
+    - path: "config/cascades.yaml"
+      description: "Agent roles and responsibilities"
+    - path: "config/notifications.yaml"
+      description: "Notification rules and templates"
+    - path: "config/playwright.config.js"
+      description: "Playwright automation configuration"
+    - path: "scripts/crewai_test.py"
+      description: "Utility script for CrewAI integration"
+    - path: "session_log.md"
+      description: "Session outcomes and lessons learned"
+    - path: "project_architecture.md"
+      description: "System design and architectural decisions"
+    - path: "knowledge_base.md"
+      description: "Domain knowledge and best practices"
+    - path: "vendor_checklist.md"
+      description: "Third-party integrations and audits"
+  
+  validation_rules:
+    - name: "markdown_linting"
+      description: "All Markdown files must pass markdownlint"
+      command: "npx markdownlint-cli '**/*.md'"
+    - name: "dead_links"
+      description: "Check for broken links"
+      command: "npx markdown-link-check"
+    - name: "literal_execution_rule"
+      description: "Enforce literal execution rule in all agent-facing docs"
+      command: "grep -q 'Literal Execution Rule [MANDATORY]' docs/*.md rules/*.md"
+    - name: "memory_protocol_rule"
+      description: "Enforce memory protocol rule in memory-protocols.md"
+      command: "grep -q 'Unified Memory System Protocols' docs/memory-protocols.md"
+
+# Code Quality Rules
+code_quality:
+  languages:
+    - name: "JavaScript/TypeScript"
+      linter: "eslint"
+      formatter: "prettier"
+      test_runner: "jest"
+      
+    - name: "Python"
+      linter: "pylint"
+      formatter: "black"
+      test_runner: "pytest"
+  
+  requirements:
+    - "Test coverage >= 80%"
+    - "No linting errors"
+    - "Documented public APIs"
+
+# Workflow Rules
+workflow:
+  required_labels:
+    - "bug"
+    - "enhancement"
+    - "documentation"
+    - "question"
+  
+  branch_naming:
+    pattern: "^(feature|bugfix|hotfix|release)/[a-z0-9-]+$"
+    examples:
+      - "feature/user-authentication"
+      - "bugfix/login-validation"
+  
+  commit_message:
+    pattern: "^(feat|fix|docs|style|refactor|test|chore)(\\(.*\\))?: .+$"
+    examples:
+      - "feat(auth): add password reset flow"
+      - "fix(api): handle null values in user endpoint"
+
+# Security Rules
+security:
+  checks:
+    - name: "dependency_vulnerabilities"
+      description: "Check for known vulnerabilities"
+      command: "npm audit || true"
+      
+    - name: "secrets_detection"
+      description: "Check for committed secrets"
+      command: "trufflehog --max_depth 1 ."
+  
+  requirements:
+    - "No high/critical vulnerabilities"
+    - "No secrets in version control"
+
+# Validation Rules
+validation:
+  - name: "check_required_files"
+    description: "Verify all required documentation and config files exist"
+    type: "file_existence"
+    files:
+      - "docs/AGENT_GUIDE.md"
+      - "docs/MEMORY_CHEATSHEET.md"
+      - "docs/memory-protocols.md"
+      - "docs/Initiate_Startup_Flow.md"
+      - "config/cascades.yaml"
+      - "config/notifications.yaml"
+      - "config/playwright.config.js"
+      - "scripts/crewai_test.py"
+      - "session_log.md"
+      - "project_architecture.md"
+      - "knowledge_base.md"
+      - "vendor_checklist.md"
+  
+  - name: "check_code_formatting"
+    description: "Verify code formatting matches project standards"
+    type: "command"
+    command: "npm run lint"
+    
+  - name: "run_tests"
+    description: "Run test suite"
+    type: "command"
+    command: "npm test"
+
+# Version Information
+version: "2.0.0"
+last_updated: "2025-05-25"
+maintainer: "Windsurf Project Team"
+

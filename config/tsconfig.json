@@ -1,0 +1,22 @@
+{
+  "description": "tsconfig.json: TypeScript config for main project and Playwright tests. Usage: Used by IDE, CI, and Playwright for type-checking and code navigation. Extensibility: Add paths to 'include', add references for new configs. Related: playwright.config.js for test runner, tsconfig.node.json for node-specific settings. See ONBOARDING.md for troubleshooting.",
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "moduleResolution": "node",
+
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true
+  },
+  "include": ["src"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
